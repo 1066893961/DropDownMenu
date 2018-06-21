@@ -1,17 +1,71 @@
-<com.yyydjk.library.DropDownMenu
-    android:id="@+id/dropDownMenu"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:ddmenuTextSize="13sp"
-    app:ddtextUnselectedColor="@color/drop_down_unselected"
-    app:ddtextSelectedColor="@color/drop_down_selected"
-    app:dddividerColor="@color/gray"
-    app:ddunderlineColor="@color/gray"
-    app:ddmenuMenuHeightPercent="0.5"
-    app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
-    app:ddmaskColor="@color/mask_color"
-    app:ddmenuBackgroundColor="@color/white"
-    app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
-  />
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.yyydjk.library.DropDownMenu2
+            android:id="@+id/dropDownMenuTop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:dddividerColor="@color/gray"
+            app:ddmaskColor="@color/mask_color"
+            app:ddmenuBackgroundColor="@color/white"
+            app:ddmenuMenuHeightPercent="0.5"
+            app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+            app:ddmenuTextSize="13sp"
+            app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+            app:ddtextSelectedColor="@color/drop_down_selected"
+            app:ddtextUnselectedColor="@color/drop_down_unselected"
+            app:ddunderlineColor="@color/gray" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/top_tv"
+        android:layout_width="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="内容显示区域u" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical">
+
+        <com.yyydjk.library.DropDownMenu
+            android:id="@+id/dropDownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:dddividerColor="@color/gray"
+            app:ddmaskColor="@color/mask_color"
+            app:ddmenuBackgroundColor="@color/white"
+            app:ddmenuMenuHeightPercent="0.5"
+            app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+            app:ddmenuTextSize="13sp"
+            app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+            app:ddtextSelectedColor="@color/drop_down_selected"
+            app:ddtextUnselectedColor="@color/drop_down_unselected"
+            app:ddunderlineColor="@color/gray" />
+    </LinearLayout>
+
+</LinearLayout>
